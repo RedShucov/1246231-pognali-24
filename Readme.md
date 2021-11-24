@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
-* Студент: [Владимир Полозов](https://up.htmlacademy.ru/adaptive/24/user/1246231).
-* Наставник: `Неизвестно`.
+* Студент: [Владимир Полозов](https://htmlacademy.ru/profile/redshucov).
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
 
 ---
 

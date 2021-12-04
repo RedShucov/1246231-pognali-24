@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Направления</title>
+</head>
+
+<body class="page__body">
+
+  <h1 class="visually-hidden">Сервис поиска попутчиков "Погнали?"</h1>
+
+  <header class="header">
+
+    <nav class="header__navigation">
+      <a class="logo" href="#">
+        <img src="img/header/lobo_mobile.svg" alt="" width="" height="">
+      </a>
+
+      <button class="header__toggle" type="button">
+        <img src="img/header/icon_menu_mobile.svg" alt="">
+        <!-- <span class="visually-hidden">Открыть меню навигации.</span> -->
+      </button>
+
+      <div class="header__navigation-wrapper">
+        <ul class="main-navigation">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">О сервисе</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Направления</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Попутчики</a>
+          </li>
+        </ul>
+
+        <div class="address-navigation">
+          <a class="address-navigation__log-in" href="#">авторизация</a>
+
+          <ul class="address-navigation__list">
+            <li class="address-navigation__item">
+              <a class="address-navigation__link" href="tel:+78005558628">
+                <div class="address-navigation__item-body">
+                  <!-- <svg></svg> -->
+                </div>
+                <span class="address-navigation__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="address-navigation__item">
+              <a class="address-navigation__link" href="mailto:mail@htmlacademy.ru">
+                <div class="address-navigation__item-body">
+                  <!-- <svg></svg> -->
+                </div>
+                <span class="address-navigation__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <img src="img/social/icon-facebook.svg" alt="">
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <img src="img/social/icon-vkontakte.svg" alt="">
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <img src="img/social/icon-instagram.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="user-navigation">
+        <ul class="user-navigation__list">
+          <li>
+            <a class="user-navigation__item user-navigation__item--phone" href="tel:+78005558628">
+              <!-- <svg></svg> -->
+              <!-- <span class="contact-navigation__text">8 800 555-86-28</span> -->
+            </a>
+          </li>
+          <li class="user-navigation__item user-navigation__item--mail">
+            <a href="mailto:mail@htmlacademy.ru">
+              <!-- <svg></svg> -->
+              <!-- <span class="contact-navigation__text">mail@htmlacademy.ru</span> -->
+            </a>
+          </li>
+        </ul>
+
+        <a class="user-navigation__log-in" href="#">авторизация</a>
+      </div>
+    </nav>
+
+  </header>
+
+  <main class="directions-page">
+
+    <div class="head-main">
+      <h2 class="head-main__title">Направления</h2>
+    </div>
+
+    <section class="directions-page__form-user">
+      <form class="user-card" action="https://echo.htmlacademy.ru" method="GET">
+        <img class="user-card__image" src="" alt="" width="100" height="100">
+        <dl class="level">
+          <dt class="level__value">80</dt>
+          <dd class="level__name">level</dd>
+        </dl>
+        <button class="user-card__button" type="button">Сменить фото</button>
+        <fieldset class="user-card__fieldset">
+          <legend class="user-card__legend">Тэги</legend>
+          <input class="" type="text" name="tags" id="tags-user-card" value="#бургер #бар #футбол #концерт #крафт">
+        </fieldset>
+        <fieldset class="user-card__fieldset">
+          <legend class="user-card__legend">Транспорт</legend>
+          <ul class="user-card__transport">
+            <li class="user-card__checkbox">
+              <label class="user-card__label" for="aircraft-user-card">
+                <input class="user-card__checkbox-spy" type="checkbox" name="aircraft" id="aircraft-user-card" checked>
+                <span class="user-card__checkbox-visible"></span>
+                <span class="user-card__text">Самолёты</span>
+              </label>
+            </li>
+            <li class="user-card__checkbox">
+              <label class="user-card__label" for="cars-user-card">
+                <input class="user-card__checkbox-spy" type="checkbox" name="cars" id="cars-user-card">
+                <span class="user-card__checkbox-visible"></span>
+                <span class="user-card__text">Автотранспорт.</span>
+              </label>
+            </li>
+            <li class="user-card__checkbox">
+              <label class="user-card__label" for="bicycles-user-card">
+                <input class="user-card__checkbox-spy" type="checkbox" name="bicycles" id="bicycles-user-card" checked>
+                <span class="user-card__checkbox-visible"></span>
+                <span class="user-card__text">Велосипеды</span>
+              </label>
+            </li>
+            <li class="user-card__checkbox">
+              <label class="user-card__label" for="onfoot-user-card">
+                <input class="user-card__checkbox-spy" type="checkbox" name="onfoot" id="onfoot-user-card" checked>
+                <span class="user-card__checkbox-visible"></span>
+                <span class="user-card__text">Пешком</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="user-plans">
+      <h2 class="directions-page__title user-plans__title">Мои планы:</h2>
+      <ul class="user-plans__list">
+        <li class="user-plans__item">
+          <span class="user-plans__number">1.</span>
+          <h3 class="user-plans__title">Франция, Италия</h3>
+          <p class="user-plans__companion-number">3 попутчика</p>
+          <span class="user-plans__date">26 мар — 29 мар</span>
+          <button type="button">Изменить</button>
+        </li>
+        <li class="user-plans__item">
+          <span class="user-plans__number">2.</span>
+          <h3 class="user-plans__title">Таиланд, Индонезия</h3>
+          <p class="user-plans__companion-number">1 попутчик</p>
+          <span class="user-plans__date">1 июл — 15 июл</span>
+          <button type="button">Изменить</button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="directions-page__form">
+      <h2 class="directions-page__title">Добавить план:</h2>
+
+      <form class="directions-form" action="https://echo.htmlacademy.ru" method="GET">
+        <fieldset class="directions-form__fieldset">
+          <h3 class="directions-page__title directions-form__title">Шаг 1. Даты пребывания</h3>
+          <p class="directions-form__text">Укажите предпочтительное количество попутчиков, которых
+            вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+          <ul class="directions-form__fieldset-list">
+            <li class="directions-form__input">
+              <label class="directions-form__label" for="travelers-directions">
+                <span>ищу попутчиков:</span>
+              </label>
+              <span class="directions-form__label-article">чел.</span>
+              <div class="directions-form__switch">
+                <button class="directions-form__switch-control" type="button"></button>
+                <input class="directions-form__switch-counter" type="number" name="travelers" id="travelers-directions" value="2">
+                <button class="directions-form__switch-control" type="button"></button>
+              </div>
+            </li>
+            <li class="directions-form__input">
+              <label class="directions-form__label" for="days-directions">
+                <span>длительность:</span>
+              </label>
+              <span class="directions-form__label-article">дн.</span>
+              <div class="directions-form__switch">
+                <button class="directions-form__switch-control" type="button"></button>
+                <input class="directions-form__switch-counter" type="number" name="days" id="days-directions" value="3">
+                <button class="directions-form__switch-control" type="button"></button>
+              </div>
+            </li>
+          </ul>
+          <ul class="directions-form__fieldset-list">
+            <li class="directions-form__checkbox">
+              <label class="directions-form__label" for="childrens-directions">
+                <input class="directions-form__checkbox-spy" type="checkbox" name="childrens" id="childrens-directions">
+                <span class="directions-form__checkbox-visible"></span>
+                <span class="directions-form__checkbox-text">Можно с детьми</span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="calendar">
+            <div class="calendar__head">
+              <p class="calendar__caption">Март 2019</p>
+              <div class="calendar__controls">
+                <button type="button">
+                  <span class="visually-hidden">Предыдущий месяц.</span>
+                </button>
+                <button type="button">
+                  <span class="visually-hidden">Следующий месяц.</span>
+                </button>
+              </div>
+            </div>
+            <div class="calendar__weekdays">
+              <div class="calendar__weekday">П</div>
+              <div class="calendar__weekday">В</div>
+              <div class="calendar__weekday">С</div>
+              <div class="calendar__weekday">Ч</div>
+              <div class="calendar__weekday">П</div>
+              <div class="calendar__weekday calendar__weekday--outlet">С</div>
+              <div class="calendar__weekday calendar__weekday--outlet">В</div>
+            </div>
+            <div class="calendar__week">
+              <div class="calendar__week-row">
+                <div class="calendar__day calendar__day--disabled">23</div>
+                <div class="calendar__day calendar__day--disabled">24</div>
+                <div class="calendar__day calendar__day--disabled">25</div>
+                <div class="calendar__day calendar__day--disabled">26</div>
+                <div class="calendar__day calendar__day--disabled">27</div>
+                <div class="calendar__day calendar__day--disabled">28</div>
+                <div class="calendar__day calendar__day--disabled">1</div>
+              </div>
+              <div class="calendar__week-row">
+                <div class="calendar__day calendar__day--disabled">2</div>
+                <div class="calendar__day calendar__day--disabled">3</div>
+                <div class="calendar__day calendar__day--disabled">4</div>
+                <div class="calendar__day calendar__day--disabled">5</div>
+                <div class="calendar__day calendar__day--disabled">6</div>
+                <div class="calendar__day calendar__day--disabled">7</div>
+                <div class="calendar__day calendar__day--disabled">8</div>
+              </div>
+              <div class="calendar__week-row">
+                <div class="calendar__day calendar__day--disabled">9</div>
+                <div class="calendar__day calendar__day--disabled">10</div>
+                <div class="calendar__day calendar__day--disabled">11</div>
+                <div class="calendar__day calendar__day--disabled">12</div>
+                <div class="calendar__day calendar__day--disabled">13</div>
+                <div class="calendar__day calendar__day--disabled">14</div>
+                <div class="calendar__day calendar__day--disabled">15</div>
+              </div>
+              <div class="calendar__week-row">
+                <div class="calendar__day calendar__day--disabled">16</div>
+                <div class="calendar__day calendar__day--disabled">17</div>
+                <div class="calendar__day calendar__day--disabled">18</div>
+                <div class="calendar__day calendar__day--disabled">19</div>
+                <div class="calendar__day calendar__day--disabled">20</div>
+                <div class="calendar__day calendar__day--disabled">21</div>
+                <div class="calendar__day calendar__day--disabled">22</div>
+              </div>
+              <div class="calendar__week-row">
+                <div class="calendar__day calendar__day--disabled">23</div>
+                <div class="calendar__day calendar__day--disabled">24</div>
+                <div class="calendar__day calendar__day--disabled">25</div>
+                <div class="calendar__day calendar__day--current">26</div>
+                <div class="calendar__day calendar__day--current">27</div>
+                <div class="calendar__day calendar__day--current">28</div>
+                <div class="calendar__day">29</div>
+              </div>
+              <div class="calendar__week-row">
+                <div class="calendar__day">30</div>
+                <div class="calendar__day">31</div>
+                <div class="calendar__day">1</div>
+                <div class="calendar__day">2</div>
+                <div class="calendar__day">3</div>
+                <div class="calendar__day">4</div>
+                <div class="calendar__day">5</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="directions-form__button" type="button">Следующий шаг</button>
+        </fieldset>
+
+        <fieldset class="directions-form__fieldset">
+          <h3 class="directions-page__title directions-form__title">Шаг 2. Маршрут</h3>
+          <p class="directions-form__text">Укажите страны, которые вы хотели бы посетить.
+            Это может быть одна или сразу несколько.</p>
+
+          <ul class="directions-form__fieldset-list">
+
+            <li class="directions-form__country-item">
+              <div class="directions-form__country-select">
+                <input class="directions-form__country-input" type="text" name="bosnia-herzegovina" id="bosnia-herzegovina-filter" value="Босния и герцеговина">
+              </div>
+              <div class="directions-form__country-figure">
+                <img class="directions-form__country-image" src="" alt="" width="35" height="24">
+                <button class="directions-form__country-delete">
+                  <span class="visually-hidden">Удалить поле.</span>
+                </button>
+              </div>
+            </li>
+
+            <li class="directions-form__country-item">
+              <div class="directions-form__country-select">
+                <input class="directions-form__country-input" type="text" name="сzech" id="сzech-filter" value="Чехия">
+              </div>
+              <div class="directions-form__country-figure">
+                <img class="directions-form__country-image" src="" alt="" width="35" height="24">
+                <button class="directions-form__country-delete">
+                  <span class="visually-hidden">Удалить поле.</span>
+                </button>
+              </div>
+            </li>
+
+            <li class="directions-form__country-item">
+              <div class="directions-form__country-select">
+                <input class="directions-form__country-input" type="text" placeholder="Выберите страну" value="">
+
+                <div class="directions-form__country-selection">
+                  <div class="country-selection">
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">A</h3>
+                      <ul class="country-selection__list country-selection__list--current">
+                        <li class="country-selection__item">Австралия</li>
+                        <li class="country-selection__item">Австрия</li>
+                        <li class="country-selection__item">Азербайджан</li>
+                        <li class="country-selection__item">Албания</li>
+                        <li class="country-selection__item">Алжир</li>
+                        <li class="country-selection__item">Ангола</li>
+                        <li class="country-selection__item">Андорра</li>
+                        <li class="country-selection__item">Антигуа и Барбуда</li>
+                        <li class="country-selection__item">Аргентина</li>
+                        <li class="country-selection__item">Армения</li>
+                        <li class="country-selection__item">Афганистан</li>
+                      </ul>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Б</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">В</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Г</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Д</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Е</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">З</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">И</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">К</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Л</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">М</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Н</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">О</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">П</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Р</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">С</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Т</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">У</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Ф</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Х</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Ч</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Ш</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Э</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Ю</h3>
+                    </div>
+                    <div class="country-selection__body">
+                      <h3 class="country-selection__title">Я</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="directions-form__country-figure">
+                <img class="directions-form__country-image" src="" alt="" width="35" height="24">
+                <button class="directions-form__country-delete">
+                  <span class="visually-hidden">Удалить поле.</span>
+                </button>
+              </div>
+            </li>
+
+            <li class="directions-form__country-item">
+              <div class="directions-form__country-select">
+                <button type="button">Добавить страну</button>
+              </div>
+            </li>
+
+          </ul>
+
+          <button class="directions-form__button-back" type="button">На шаг назад</button>
+          <button class="directions-form__button" type="button">Следующий шаг</button>
+        </fieldset>
+
+        <fieldset class="directions-form__fieldset">
+          <h3 class="directions-page__title directions-form__title">Шаг 3. Развлечения</h3>
+          <p class="directions-form__text">Наконец, расскажите о своих планах времяпровождения.
+            Можно писать в свободной форме и ставить тэги.</p>
+
+          <div class="">
+            <h3 class="directions-form__country-name">Босния и Герцеговина</h3>
+            <img src="" alt="" width="35" height="24">
+            <textarea name="plan-bosnia" id="plan-bosnia-directions" cols="30" rows="10" placeholder="План действий"></textarea>
+          </div>
+
+          <div>
+            <h3 class="directions-form__country-name">Чехия</h3>
+            <img src="" alt="" width="35" height="24">
+            <textarea name="plan-czech" id="plan-czech-directions" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          </div>
+          <button class="directions-form__button-back" type="button">На шаг назад</button>
+          <button class="directions-form__button" type="submit">Отправить</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer__logo">
+      <img class="logo" src="" alt="логотип сервиса'Погнали?'." width="107" height="17">
+    </div>
+
+    <section class="footer__social">
+      <h2 class="visually-hidden">Наши соцсети.</h2>
+
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="#">
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#">
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#">
+            <!-- <svg></svg> -->
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="developed footer__developed">
+      <span class="developed__text">Разработано</span>
+      <img class="developed__image" src="" alt="" width="27" height="33">
+    </div>
+
+  </footer>
+</body>
+
+</html>

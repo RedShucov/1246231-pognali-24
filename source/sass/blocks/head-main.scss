@@ -1,0 +1,24 @@
+.head-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: var(--blue-dark);
+}
+
+.head-main__title {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--white);
+}
+
+.head-main__link {
+  display: none;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white);
+  text-transform: uppercase;
+}

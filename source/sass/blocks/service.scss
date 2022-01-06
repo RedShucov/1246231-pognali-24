@@ -1,0 +1,22 @@
+.service {
+  color: var(--white);
+
+  background-color: var(--blue-dark);
+  border-radius: 0 0 20px 20px;
+}
+
+.service__inner {
+  min-height: 353px;
+
+  background-image: url("../../img/img-decor/background/about-mobile.png");
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+}
+
+.service__sub-text {
+  font-weight: 700;
+}
+
+.service__button {
+  display: none;
+}

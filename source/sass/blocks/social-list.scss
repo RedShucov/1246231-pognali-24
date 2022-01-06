@@ -1,0 +1,32 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  column-gap: 27px;
+}
+
+
+.social-list--footer {
+  justify-content: center;
+  margin-top: 45px;
+
+  column-gap: 0;
+}
+
+.social-list--footer .social-list__item {
+  display: flex;
+  width: 45px;
+  height: 44px;
+
+  background-color: var(--yellow);
+  border-radius: 50%;
+}
+
+.social-list--footer .social-list__link {
+  margin: auto;
+
+  line-height: 0;
+}

@@ -1,0 +1,116 @@
+.tariffs {
+  position: relative;
+
+  font-size: 16px;
+  line-height: 14px;
+
+  background-color: var(--white-dark);
+  border-radius: 0 0 20px 20px;
+}
+
+.tariffs__title {
+  padding-right: 125px;
+}
+
+.tariffs__list {
+  margin: 0;
+  padding: 0;
+}
+
+.tariffs__tariff-wrapper:first-child {
+  border-top: 1px solid var(--grey-two-light);
+}
+
+.tariffs__tariff-wrapper {
+  position: relative;
+
+  padding-top: 13px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--grey-two-light);
+}
+
+.tariffs__list--standard .tariffs__tariff-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+
+  font-weight: 400;
+  color: var(--white);
+
+  border-radius: 50%;
+}
+
+.tariffs__list--standard .tariffs__tariff-wrapper:first-child::before {
+  content: "1";
+
+  background-color: var(--orange-dark);
+}
+
+.tariffs__list--standard .tariffs__tariff-wrapper:nth-child(2)::before {
+  content: "2";
+
+  background-color: var(--yellow-dark);
+}
+
+.tariffs__list--standard .tariffs__tariff-wrapper:nth-child(3)::before {
+  content: "3";
+
+  background-color: var(--yellow);
+}
+
+.tariffs__name {
+  margin-bottom: 6px;
+}
+
+.tariffs__value {
+  margin: 0;
+  padding: 0;
+}
+
+.tariffs__button {
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--blue-two-light);
+}
+
+// доделать!
+.tariffs__business {
+  line-height: 22px;
+
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(29, 46, 91, 0.14);
+}
+
+.tariffs__business-body {
+  padding: 34px 25px;
+}
+
+.tariffs__button-close {
+  padding: 21px 80px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  color: var(--blue-light);
+  text-transform: uppercase;
+
+  background-color: var(--white-two);
+  border: none;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+}
+
+.tariffs__business-title {
+  padding-bottom: 28px;
+}

@@ -1,0 +1,49 @@
+.user-navigation {
+  display: flex;
+}
+
+.user-navigation__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.user-navigation__item {
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.user-navigation__item--phone {
+  background-color: var(--orange-dark);
+}
+
+.user-navigation__item--mail {
+  background-color: var(--yellow-dark);
+}
+
+.user-navigation__link {
+  margin: auto;
+
+  line-height: 0;
+}
+
+.user-navigation__log-in {
+  display: block;
+  flex-grow: 1;
+  padding-top: 12px;
+  padding-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  color: var(--blue);
+  text-transform: uppercase;
+
+  background-color: var(--yellow);
+  border-radius: 25px;
+}

@@ -1,0 +1,21 @@
+.directions-page {
+  color: var(--blue-light);
+}
+
+.directions-page__title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.directions-page__form {
+  margin-top: -20px;
+  margin-bottom: -29px;
+  padding-top: 30px;
+  padding-bottom: 72px;
+
+  background-color: #d4d9eb;
+  border-radius: 30px 30px 0 0;
+}

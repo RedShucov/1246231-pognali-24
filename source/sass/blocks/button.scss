@@ -1,0 +1,34 @@
+.button {
+  position: relative;
+
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 23px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--blue-light);
+
+  background-color: var(--yellow);
+  border-radius: 10px;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 23px;
+
+  display: block;
+  width: 11px;
+  height: 12px;
+
+  background-image: url("../../img/img-decor/otherwise/button.svg");
+}
+
+
+.button .button--transparent {
+  border: 3px solid #192144;
+}

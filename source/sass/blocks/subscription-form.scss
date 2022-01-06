@@ -1,0 +1,29 @@
+.subscription-form {
+  display: flex;
+  height: 62px;
+
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.subscription-form__input {
+  flex: 1;
+  flex-grow: 1;
+  padding: 0;
+
+  border: none;
+  border-radius: 10px;
+}
+
+.subscription-form__button {
+  flex-basis: 60px;
+  padding: 0;
+
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 10px;
+}
+
+.subscription-form__button-text {
+  display: none;
+}

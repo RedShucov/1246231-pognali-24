@@ -1,0 +1,205 @@
+.directions-form {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 400;
+
+  gap: 10px;
+}
+
+.directions-form__title {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.directions-form__text {
+  color: var(--grey-dark);
+}
+
+.directions-form__fieldset {
+  margin: 0;
+  padding: 24px 24px 23px 25px;
+
+  background-color: var(--white);
+  border: none;
+  border-radius: 10px;
+}
+
+.directions-form__fieldset:first-child {
+  margin-top: 29px;
+}
+
+.directions-form__fieldset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  line-height: 16px;
+}
+
+.directions-form__input {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.directions-form__label {
+  display: flex;
+}
+
+.directions-form__label-article {
+  margin-left: auto;
+
+  letter-spacing: 0.07em;
+
+  opacity: 0.3;
+}
+
+.directions-form__switch {
+  display: flex;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+}
+
+.directions-form__switch-counter {
+  flex: 1;
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 13px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  text-align: center;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.directions-form__switch-counter::-webkit-outer-spin-button,
+.directions-form__switch-counter::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.directions-form__switch-counter[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.directions-form__switch-control {
+  width: 28px;
+
+  cursor: pointer;
+}
+
+.directions-form__checkbox-text {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.directions-form__plan {
+  position: relative;
+}
+
+.directions-form__plan:not(:last-of-type)::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+
+  display: block;
+  width: 2px;
+  height: 252px;
+
+  background: #1d2e5b;
+}
+
+.directions-form__plan-title::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  background: #1d2e5b;
+  border-radius: 50%;
+}
+
+.directions-form__plan-title::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+
+  display: block;
+  width: 11px;
+  height: 2px;
+
+  background: #1d2e5b;
+}
+
+.directions-form__plan-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.directions-form__country-name {
+  position: relative;
+
+  min-width: 187px;
+  margin: 0;
+  padding-left: 10px;
+  overflow: hidden;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.directions-form__country-name::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1px;
+
+  display: block;
+  width: 50px;
+  height: 100%;
+
+  background: linear-gradient(to left, #ffffff 60%, transparent);
+}
+
+.directions-form__plan-description {
+  width: 220px;
+  min-height: 220px;
+  padding-top: 11px;
+  padding-right: 19px;
+  padding-left: 14px;
+
+  font-family: inherit;
+
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+
+  resize: none;
+}
+
+.directions-form__button {
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  background-color: #ffd74b;
+  border: none;
+  border-radius: 20px;
+}

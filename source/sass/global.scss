@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  color: var(--grey-dark);
+
+  background-color: var(--white-dark);
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}

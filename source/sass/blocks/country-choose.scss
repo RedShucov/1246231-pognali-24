@@ -1,0 +1,117 @@
+.country-choose {
+  position: relative;
+
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.country-choose__select {
+  position: relative;
+
+  width: 168px;
+  padding: 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+  overflow: hidden;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  text-align: start;
+  color: var(--blue-light);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
+
+  background-color: var(--white);
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.country-choose__select::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 0;
+
+  display: block;
+  width: 52px;
+  height: 42px;
+
+  background: url("../../img/img-decor/otherwise/fade-mobile.png");
+}
+
+.country-choose__select::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 10px;
+
+  display: block;
+  width: 16px;
+  height: 12px;
+
+  background: url("../../img/img-decor/otherwise/arrow.svg") no-repeat;
+}
+
+.country-choose__select--unselected,
+.country-choose__select--add {
+  width: 100%;
+}
+
+.country-choose__select--unselected::before,
+.country-choose__select--add::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 50px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  border: 1px solid #cbced9;
+  border-radius: 50%;
+}
+
+.country-choose__select--add {
+  background-color: #edeff6;
+}
+
+.country-choose__select--add::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-image: url("../../img/img-decor/otherwise/icon-plus.svg");
+}
+
+.country-choose__country-figure {
+  position: relative;
+
+  padding: 9px;
+
+  border: 1px solid #cbced9;
+  border-left: none;
+  border-radius: 4px;
+}
+
+.country-choose__country-delete {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  width: 21px;
+  height: 21px;
+  padding: 0;
+
+  background-color: #edeff6;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}

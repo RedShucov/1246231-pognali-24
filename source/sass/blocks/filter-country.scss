@@ -1,0 +1,87 @@
+.filter-country {
+  padding-top: 22px;
+  padding-bottom: 28px;
+
+  background-color: var(--grey-three-light);
+  border-radius: 0 0 20px 20px;
+}
+
+.filter-country__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-country__title {
+  margin: 0;
+
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--blue-dark);
+  text-transform: uppercase;
+}
+
+// раскладка для mobile
+.filter-country__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  row-gap: 9px;
+}
+
+// скрытый список на mobile
+.filter-country__list--spy-mobile {
+  display: none;
+}
+
+.filter-country__item {
+  color: var(--blue-dark);
+
+  opacity: 0.3;
+}
+
+.filter-country__item--active {
+  opacity: 1;
+}
+
+.filter-country__body {
+  margin-top: 38px;
+}
+
+.filter-country__body-container {
+  padding: 0 25px;
+}
+
+.filter-country__country-selection {
+  margin-top: 21px;
+}
+
+.filter-country__current-list {
+  margin-top: 14px;
+}
+
+.filter-country__button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  color: var(--blue-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background-color: #d6daed;
+  border: none;
+  border-radius: 20px;
+}

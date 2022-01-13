@@ -1,0 +1,85 @@
+.promo {
+  color: var(--white);
+
+  background: url("../../img/img-decor/background/globe-back-mobile.png") no-repeat,
+    linear-gradient(0deg, rgba(25, 33, 68, 1) 50%, rgba(22, 28, 53, 1) 50%);
+}
+
+.promo__inner {
+  background: url("../../img/img-decor/background/traveller-illustration-mobile.png") no-repeat 75px 170px,;
+}
+
+.promo__lead {
+  margin-top: 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.promo__review {
+  margin-top: 313px;
+}
+
+.promo__review-author {
+  font-weight: 700;
+}
+
+.promo__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--blue);
+}
+
+.promo__item {
+  position: relative;
+
+  width: 270px;
+  height: 89px;
+  padding-top: 24px;
+  padding-right: 65px;
+  padding-left: 22px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.promo__item:nth-child(1n+2) {
+  margin-top: -9px;
+}
+
+.promo__item:last-child {
+  height: 80px;
+
+  border-radius: 10px;
+}
+
+.promo__item:nth-child(1) {
+  background-color: var(--orange-dark);
+}
+
+.promo__item:nth-child(2) {
+  background-color: var(--orange);
+}
+
+.promo__item:nth-child(3) {
+  background-color: var(--yellow-dark);
+}
+
+.promo__item:nth-child(4) {
+  background-color: var(--yellow);
+}
+
+.promo__item-number {
+  position: absolute;
+  top: 21px;
+  right: 22px;
+
+  color: var(--white);
+}

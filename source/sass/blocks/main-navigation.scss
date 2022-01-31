@@ -9,10 +9,23 @@
   text-align: center;
 }
 
+@media (min-width: $tablet-width) {
+  .main-navigation__item {
+    text-align: start;
+  }
+}
+
 .main-navigation__link {
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
   color: var(--blue-dark);
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__link {
+    font-size: 60px;
+    line-height: 71px;
+  }
 }

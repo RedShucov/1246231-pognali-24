@@ -1,8 +1,29 @@
+@media (min-width: 1440px) {
+  .catalog-page__form-and-catalog {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .catalog-page__form {
   margin-top: 21px;
+}
+
+@media (min-width: 1440px) {
+  .catalog-page__form {
+    order: 2;
+    width: 285px;
+    margin-top: 0;
+  }
 }
 
 .catalog-page__catalog {
   margin-top: 28px;
   margin-bottom: 46px;
+}
+
+@media (min-width: 1440px) {
+  .catalog-page__catalog {
+    margin-top: 0;
+  }
 }

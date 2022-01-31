@@ -2,12 +2,26 @@
   color: var(--blue-light);
 }
 
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .directions-page__inner {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}
+
 .directions-page__title {
   margin: 0;
 
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .directions-page__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .directions-page__form {

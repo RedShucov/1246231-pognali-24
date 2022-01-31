@@ -1,11 +1,7 @@
-// .address-navigation {
-
-// }
-
-// это нужно как-то оптимизировать, что-то надо вынести в отдельный класс(возможно)
 .address-navigation__log-in {
   display: block;
-  padding-top: 12px;
+  margin-right: 24px;
+  padding-top: 10px;
   padding-bottom: 8px;
 
   font-weight: 700;
@@ -19,8 +15,16 @@
   border-radius: 25px;
 }
 
+@media (min-width: $tablet-width) {
+  .address-navigation__log-in {
+    display: none;
+  }
+}
+
 .address-navigation__list {
   margin: 0;
+  margin-top: 52px;
+  margin-left: 25px;
   padding: 0;
 
   list-style: none;
@@ -35,8 +39,22 @@
   width: 45px;
   height: 45px;
 
-  background-color: #121936;
+  background-color: var(--blue-two-dark);
   border-radius: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .address-navigation__item-body {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address-navigation__item-body {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .address-navigation__item-body svg {
@@ -49,11 +67,15 @@
 
   font-weight: 700;
   line-height: 18px;
-  color: #192144;
+  color: var(--blue-dark);
   text-transform: uppercase;
 }
 
-.address-navigation--contacts .address-navigation__text {
-  line-height: 22px;
-  color: var(--yellow);
+@media (min-width: $tablet-width) {
+  .address-navigation__text {
+    margin-left: 22px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
 }

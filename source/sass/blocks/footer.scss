@@ -1,31 +1,123 @@
 .footer {
   position: relative;
 
-  padding-top: 37px;
+  padding-top: 38px;
+  padding-bottom: 19px;
 
   background-color: var(--white);
   border-radius: 30px 30px 0 0;
 }
 
-.footer__logo {
-  text-align: center;
+@media (min-width: $tablet-width) {
+  .footer {
+    padding-top: 47px;
+    padding-bottom: 31px;
+
+    border-radius: 60px 60px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    padding-bottom: 43px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .footer__logo {
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__logo {
+    margin-top: 22px;
+    margin-left: 57px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__logo {
+    margin-top: 21px;
+    margin-left: 70px;
+  }
 }
 
 .footer__logo path {
   fill: var(--blue-dark);
 }
 
+@media (max-width: $mobile-width-only) {
+  .footer__social {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__social {
+    margin-left: 87px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__social {
+    margin-left: 370px;
+  }
+}
+
 .footer__developed {
   display: flex;
   justify-content: space-between;
-  margin-top: 37px;
-  padding-top: 22px;
-  padding-bottom: 27px;
+  align-items: center;
+}
 
-  border-top: 1px solid #f2f2f2;
+@media (max-width: $mobile-width-only) {
+  .footer__developed {
+    margin-top: 37px;
+    padding-top: 10px;
+
+    border-top: 1px solid var(--white-dark-two);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__developed {
+    align-self: center;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__developed {
+    margin-top: 4px;
+    margin-right: 1px;
+  }
 }
 
 .footer__developed-text {
   font-weight: 400;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__developed-text {
+    margin-right: 22px;
+    margin-bottom: 7px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__developed-text {
+    margin-right: 25px;
+  }
 }

@@ -6,24 +6,105 @@
   border-radius: 10px;
 }
 
+@media (min-width: $tablet-width) {
+  .subscription-form {
+    height: 80px;
+
+    border-radius: 18px;
+  }
+}
+
 .subscription-form__input {
   flex: 1;
-  flex-grow: 1;
+  width: 100%;
   padding: 0;
+  padding-left: 24px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
 
   border: none;
   border-radius: 10px;
 }
 
+@media (min-width: $tablet-width) {
+  .subscription-form__input {
+    padding-top: 0;
+    padding-left: 35px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 18px 0 0 18px;
+  }
+}
+
 .subscription-form__button {
+  position: relative;
+
   flex-basis: 60px;
   padding: 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
+  color: var(--blue-light);
 
   background-color: var(--yellow);
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .subscription-form__button {
+    flex-basis: 80px;
+
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subscription-form__button {
+    flex-basis: 323px;
+  }
+}
+
+.subscription-form__button:hover {
+  background-color: var(--yellow-dark);
+}
+
+.subscription-form__button:active {
+  color: var(--blue-light-alpha3);
+}
+
+.subscription-form__button:active::after {
+  border-left-color: var(--blue-light-alpha3);
+}
+
+@media (min-width: $tablet-width) {
+  .subscription-form__button::after {
+    top: 35px;
+    right: 33px;
+
+    border-left: 12px solid var(--blue-dark);
+  }
 }
 
 .subscription-form__button-text {
   display: none;
 }
+
+@media (min-width: $desktop-width) {
+  .subscription-form__button-text {
+    display: inline;
+    padding-right: 114px;
+    padding-left: 0;
+  }
+}
+
+// top: 32px;
+// right: 33px;

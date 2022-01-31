@@ -5,12 +5,36 @@
   background-color: var(--blue-dark);
 }
 
+.head-main__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .head-main__inner {
+    padding: 0 34px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .head-main__inner {
+    padding: 0 66px;
+  }
+}
+
 .head-main__title {
   margin: 0;
 
   font-size: 36px;
   line-height: 36px;
   color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .head-main__title {
+    font-size: 60px;
+    line-height: 20px;
+  }
 }
 
 .head-main__link {
@@ -21,4 +45,10 @@
   line-height: 20px;
   color: var(--white);
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .head-main__link {
+    display: block;
+  }
 }

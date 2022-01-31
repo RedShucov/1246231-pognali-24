@@ -1,24 +1,47 @@
 :root {
   --black: #000000;
+  --black-alpha6: rgba(0, 0, 0, 0.6);
   --blue: #161c35;
+  --blue-alpha3: rgba(22, 28, 53, 0.3);
   --blue-dark: #192144;
   --blue-light: #1d2e5b;
-  --blue-light-20: rgba(29, 46, 91, 0.2);
+  --blue-light-alpha2: rgba(29, 46, 91, 0.2);
+  --blue-light-alpha3: rgba(29, 46, 91, 0.3);
+  --blue-three-dark: #141b3b;
+  --blue-two: #182044;
   --blue-two-dark: #121936;
   --blue-two-light: #132576;
   --green: #81e31e;
   --grey: #cccccc;
+  --grey-blue: #d1d7e9;
   --grey-dark: #444444;
+  --grey-dark-alpha3: rgba(68, 68, 68, 0.3);
+  --grey-five-light: #d6d9e6;
+  --grey-four-light: #cbced9;
   --grey-light: #e6e8f1;
-  --grey-two-light: #e1e3e9;
+  --grey-six-light: #dfe3f0;
   --grey-three-light: #e2e5f2;
+  --grey-two: #c4c4c4;
+  --grey-two-light: #e1e3e9;
   --orange: #ffa530;
   --orange-dark: #ff8d30;
+  --orange-dark-two: #f26926;
   --red-light: #f97676;
   --tomato: #ff5c23;
   --white: #ffffff;
+  --white-alpha3: rgba(255, 255, 255, 0.3);
+  --white-alpha6: rgba(255, 255, 255, 0.6);
   --white-dark: #edeff6;
+  --white-dark-two: #f2f2f2;
+  --white-three: #f9eaea;
   --white-two: #f3f4f8;
   --yellow: #ffd74b;
   --yellow-dark: #ffbd30;
+  --yellow-two: #f3c72b;
 }
+
+// Viewports
+$mobile-width: 320px;
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

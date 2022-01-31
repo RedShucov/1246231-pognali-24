@@ -1,5 +1,65 @@
 .logo {
+  position: relative;
+
   display: block;
 
   line-height: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    margin-top: 17px;
+    margin-left: 57px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    margin-top: 12px;
+    margin-left: 72px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -59px;
+
+    display: block;
+    width: 155px;
+    height: 42px;
+
+    background-image: url("../../img/img-decor/background/logo-back.png");
+    background-size: contain;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo::before {
+    top: -14px;
+    left: -70px;
+
+    width: 187px;
+    height: 50px;
+  }
+}
+
+.logo__image {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__image {
+    width: 107px;
+    height: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo__image {
+    width: 129px;
+    height: 20px;
+  }
 }

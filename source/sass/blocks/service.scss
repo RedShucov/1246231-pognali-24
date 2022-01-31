@@ -1,22 +1,144 @@
 .service {
+  position: relative;
+  z-index: 3;
+
+  padding-top: 70px;
+  padding-bottom: 68px;
+
   color: var(--white);
 
   background-color: var(--blue-dark);
-  border-radius: 0 0 20px 20px;
-}
-
-.service__inner {
-  min-height: 353px;
-
   background-image: url("../../img/img-decor/background/about-mobile.png");
   background-repeat: no-repeat;
   background-position-x: 20px;
+  background-position-y: 38px;
+  border-radius: 0 0 30px 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .service {
+    padding-top: 132px;
+    padding-bottom: 89px;
+
+    background-image: url("../../img/img-decor/background/about-tablet.png");
+    background-position-x: 82%;
+    background-position-y: 52%;
+    border-radius: 0 0 60px 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service {
+    padding-top: 251px;
+    padding-bottom: 163px;
+
+    background-image: url("../../img/img-decor/background/about-desktop.png");
+    background-position-x: 750px;
+    background-position-y: 100%;
+    border-radius: 0 0 56px 56px;
+  }
+}
+
+.service__inner {
+  position: relative;
+
+  padding-left: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .service__inner {
+    padding-left: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service__inner {
+    padding-left: 72px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service__inner::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: 3px;
+    z-index: -1;
+
+    display: block;
+    width: 212px;
+    height: 212px;
+
+    background: var(--blue-three-dark);
+    border-radius: 20px;
+  }
+}
+
+.service__text {
+  margin-top: 19px;
+  padding-right: 36px;
+}
+
+@media (min-width: $tablet-width) {
+  .service__text {
+    margin-top: 42px;
+    padding-right: 353px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service__text {
+    margin-top: 60px;
+    padding-right: 634px;
+  }
 }
 
 .service__sub-text {
+  margin-top: 19px;
+  padding-right: 37px;
+
   font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .service__sub-text {
+    margin-top: 32px;
+    padding-right: 375px;
+
+    font-size: 21px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service__sub-text {
+    margin-top: 40px;
+    padding-right: 840px;
+  }
 }
 
 .service__button {
   display: none;
+  width: 275px;
+}
+
+@media (min-width: $tablet-width) {
+  .service__button {
+    display: block;
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .service__button {
+    margin-top: 87px;
+  }
+}
+
+.service__button::after {
+  top: 33px;
+  right: 35px;
 }

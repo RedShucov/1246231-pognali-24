@@ -5,12 +5,33 @@
   color: var(--grey-dark);
 }
 
+@media (min-width: $tablet-width) {
+  .calendar {
+    font-size: 18px;
+  }
+}
+
 .calendar__head {
   display: flex;
+  justify-content: center;
   padding: 11px 0;
 
-  border-top: 1px solid #d6d9e6;
-  border-bottom: 1px solid #d6d9e6;
+  border-top: 1px solid var(--grey-five-light);
+  border-bottom: 1px solid var(--grey-five-light);
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__head {
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__head {
+    padding-top: 28px;
+    padding-bottom: 22px;
+  }
 }
 
 .calendar__month-caption {
@@ -20,6 +41,13 @@
   font-size: 20px;
   line-height: 20px;
   color: var(--blue-dark);
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__month-caption {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__control-button {
@@ -37,8 +65,41 @@
   column-gap: 24px;
 }
 
+@media (min-width: $tablet-width) {
+  .calendar__weekdays {
+    justify-content: start;
+
+    gap: 0;
+  }
+}
+
 .calendar__weekday--outlet {
   color: var(--tomato);
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__weekday {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__weekday {
+    justify-content: start;
+    padding-left: 16px;
+  }
+}
+
+.calendar__letter-spy-mobile {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__letter-spy-mobile {
+    display: inline;
+  }
 }
 
 .calendar__weeks {
@@ -46,7 +107,7 @@
   flex-direction: column;
   padding: 1px;
 
-  background-color: #d6d9e6;
+  background-color: var(--grey-five-light);
 
   row-gap: 1px;
 }
@@ -59,24 +120,38 @@
 
 .calendar__day {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
-  width: 30px;
   height: 31px;
+
+  color: var(--grey-dark-alpha3);
 
   background-color: var(--white);
   cursor: pointer;
 }
 
-.calendar__day:nth-child(2n) {
-  width: 31px;
+@media (min-width: $tablet-width) {
+  .calendar__day {
+    height: 68px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__day {
+    justify-content: start;
+    align-items: start;
+    height: 69px;
+    padding-top: 15px;
+    padding-left: 16px;
+  }
 }
 
 .calendar__day--access {
   font-weight: 500;
   color: var(--blue-dark);
 
-  background: #edeff6;
+  background-color: var(--white-dark);
 }
 
 .calendar__day--current {

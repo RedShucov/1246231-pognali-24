@@ -15,6 +15,19 @@
   border-radius: 10px;
 }
 
+@media (min-width: $tablet-width) {
+  .button {
+    padding-top: 26px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+}
+
 .button::after {
   content: "";
   position: absolute;
@@ -25,10 +38,23 @@
   width: 11px;
   height: 12px;
 
-  background-image: url("../../img/img-decor/otherwise/button.svg");
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid var(--blue-dark);
 }
 
+.button:hover {
+  background-color: var(--yellow-dark);
+}
+
+.button:active {
+  color: var(--blue-light-alpha3);
+}
+
+.button:active::after {
+  border-left-color: var(--blue-light-alpha3);
+}
 
 .button .button--transparent {
-  border: 3px solid #192144;
+  border: 3px solid var(--blue-dark);
 }

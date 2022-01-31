@@ -10,6 +10,24 @@
   border-radius: 20px;
 }
 
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form {
+    padding-top: 37px;
+    padding-right: 36px;
+    padding-bottom: 37px;
+    padding-left: 34px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .filter-form {
+    padding-top: 46px;
+    padding-right: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+  }
+}
+
 .filter-form__title {
   margin: 0;
 
@@ -23,10 +41,35 @@
   padding: 0;
 
   border: none;
-  border-top: 1px solid #f3c72b;
+  border-top: 1px solid var(--yellow-two);
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .filter-form__fieldset {
+    display: flex;
+    justify-content: space-between;
+
+    border: none;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .filter-form__fieldset:first-of-type {
+    border-top: 1px solid var(--yellow-two);
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .filter-form__fieldset:last-of-type {
+    padding-bottom: 37px;
+
+    border-bottom: 1px solid var(--yellow-two);
+  }
 }
 
 .filter-form__legend {
+  position: relative;
+
   margin: 0;
   padding-top: 12px;
 
@@ -35,17 +78,204 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .filter-form__legend {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.filter-form__legend::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 24px;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  border: 5px solid transparent;
+  border-bottom: 6px solid var(--blue-dark);
+  transform: rotate(-180deg);
+}
+
+.filter-form__fieldset--active .filter-form__legend::after {
+  transform: rotate(0deg);
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__legend::after {
+    content: none;
+  }
+}
+
 .filter-form__list {
   margin: 0;
   padding: 0;
   padding-top: 16px;
 
   list-style: none;
+  font-weight: 400;
   font-size: 15px;
   line-height: 20px;
   color: var(--black);
 }
 
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 490px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__list {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.filter-form__list--transport {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form__list--level {
+    justify-content: space-between;
+  }
+}
+
+.filter-form__checkbox-body {
+  margin-bottom: 12px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__checkbox-body {
+    width: 150px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__checkbox-body {
+    width: auto;
+    margin-bottom: 16px;
+  }
+}
+
+.filter-form__checkbox-body:last-of-type {
+  margin-bottom: 0;
+}
+
+.filter-form__label {
+  display: flex;
+  align-items: center;
+
+  column-gap: 9px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__label {
+    column-gap: 12px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__label {
+    column-gap: 13px;
+  }
+}
+
+.filter-form__label:active {
+  opacity: 0.3;
+}
+
+.filter-form__label-transport {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-form__checkbox {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+
+  background-color: var(--white);
+  background-size: contain;
+  border-radius: 4px;
+
+  appearance: none;
+  place-content: center;
+}
+
+.filter-form__checkbox:not(:checked):hover {
+  background-color: var(--white-alpha6);
+}
+
+.filter-form__text:hover {
+  color: var(--black-alpha6);
+}
+
+.filter-form__checkbox::before {
+  content: "";
+
+  display: block;
+  width: 11px;
+  height: 11px;
+
+  background: url("../../img/img-decor/otherwise/checkbox-active.svg");
+  transform: scale(0);
+}
+
+.filter-form__checkbox:checked::before {
+  transform: scale(1);
+}
+
+.filter-form__checkbox-transport {
+  width: 31px;
+  height: 31px;
+  margin: 0;
+
+  background-color: var(--white);
+  border-radius: 50%;
+
+  appearance: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__checkbox-transport {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.filter-form__checkbox-transport:not(:checked) + .filter-form__checkbox-transport-img {
+  opacity: 0.15;
+}
+
+.filter-form__checkbox-transport-img {
+  position: absolute;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__checkbox-transport-img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* stylelint-disable */
 .filter-form__range-input::-webkit-outer-spin-button,
 .filter-form__range-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -54,12 +284,26 @@
 .filter-form__range-input[type="number"] {
   -moz-appearance: textfield;
 }
+/* stylelint-enable */
 
 .filter-form__range-box {
   position: relative;
 
   display: flex;
   width: 220px;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form__range-box {
+    order: 2;
+    width: 148px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .filter-form__range-box {
+    width: 192px;
+  }
 }
 
 .filter-form__range-input {
@@ -76,7 +320,7 @@
   color: var(--blue-light);
   letter-spacing: 0.06em;
 
-  border: 1px solid #cbced9;
+  border: 1px solid var(--grey-four-light);
 }
 
 .filter-form__range-input--min {
@@ -115,14 +359,28 @@
   height: 2px;
   margin-top: 21px;
 
-  background-color: var(--blue-light-20);
+  background-color: var(--blue-light-alpha2);
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form__range-scale {
+    width: 281px;
+  }
 }
 
 .filter-form__range-bar {
+  position: relative;
+
   width: 150px;
   height: inherit;
 
   background-color: var(--blue-light);
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form__range-bar {
+    width: 166px;
+  }
 }
 
 .filter-form__range-button {
@@ -140,7 +398,7 @@
 }
 
 .filter-form__range-button--max {
-  left: 142px;
+  left: 96%;
 }
 
 .filter-form__button {
@@ -162,12 +420,22 @@
   cursor: pointer;
 }
 
+@media (min-width: 768px) and (max-width: 1440px) {
+  .filter-form__button {
+    padding-top: 18px;
+    padding-bottom: 17px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .filter-form__button:hover {
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
 }
 
 .filter-form__button:active {
-  background: #f3c72b;
+  background: var(--yellow-two);
   opacity: 0.3;
   filter: none;
 }

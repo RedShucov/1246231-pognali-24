@@ -35,7 +35,7 @@
   border-radius: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .companion-catalog__pagination {
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .companion-catalog__pagination {
     padding-right: 41px;
     padding-left: 29px;
@@ -63,7 +63,7 @@
   list-style: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .companion-catalog__pagination-list {
     display: flex;
   }
@@ -118,7 +118,7 @@
   border-bottom-left-radius: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .companion-catalog__pagination--previous {
     border: none;
   }

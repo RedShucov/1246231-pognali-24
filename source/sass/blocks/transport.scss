@@ -1,10 +1,13 @@
 .transport {
   display: flex;
-  // justify-content: center;
   margin: 0;
   padding: 16px 0;
 
   list-style: none;
+}
+
+.transport--user-card {
+  justify-content: center;
 }
 
 .transport__label {
@@ -13,6 +16,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.transport__label:hover .transport__checkbox-img {
+  opacity: 0.7;
+}
+
+.transport__label:active .transport__checkbox-img {
+  opacity: 0.3;
+}
+
+.transport__label:active .transport__checkbox {
+  background-color: var(--grey-seven-light);
 }
 
 .transport__checkbox {

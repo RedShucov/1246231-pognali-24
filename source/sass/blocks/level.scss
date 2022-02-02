@@ -3,13 +3,11 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 45px;
   height: 45px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .level {
     width: 65px;
     height: 65px;
@@ -21,6 +19,8 @@
 
   width: 100%;
   height: 100%;
+
+  transform: rotate(-90deg);
 }
 
 .level__progress-ring--dark {
@@ -31,7 +31,7 @@
 .level__progress-circle {
   fill: transparent;
   stroke: var(--orange-dark);
-  stroke-width: 4px;
+  stroke-width: 3px;
 }
 
 .level__value {
@@ -43,7 +43,7 @@
   color: var(--blue-light);
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .level__value::before {
     content: "";
     position: absolute;
@@ -59,7 +59,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .level__value::before {
     left: -4px;
 
@@ -78,9 +78,89 @@
   opacity: 0.4;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .level__title {
     display: block;
   }
 }
 
+.level--user-card {
+  width: 100px;
+  height: 100px;
+
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+@media (min-width: $tablet-width) {
+  .level--user-card {
+    width: 94px;
+    height: 94px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level--user-card {
+    width: 95px;
+    height: 95px;
+    margin-top: -138px;
+    margin-left: 73px;
+
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+
+.level--user-card .level__value {
+  margin-top: 14px;
+  padding-left: 28px;
+
+  font-size: 38px;
+  line-height: 38px;
+}
+
+@media (min-width: $desktop-width) {
+  .level--user-card .level__value {
+    color: var(--white);
+  }
+}
+
+.level--user-card .level__value::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 25px;
+
+  display: block;
+  width: 50px;
+  height: 1px;
+
+  background-color: var(--black);
+  opacity: 0.1;
+}
+
+@media (min-width: $desktop-width) {
+  .level--user-card .level__value::before {
+    height: 2px;
+
+    background-color: var(--white);
+    opacity: 0.3;
+  }
+}
+
+.level--user-card .level__title {
+  display: block;
+  margin-top: 9px;
+  padding-left: 33px;
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+@media (min-width: $desktop-width) {
+  .level--user-card .level__title {
+    color: var(--white);
+
+    opacity: 1;
+  }
+}

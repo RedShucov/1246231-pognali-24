@@ -80,7 +80,6 @@
   }
 }
 
-// список только для мобилки
 @media (min-width: 320px) and (max-width: 768px) {
   .filter-country__list--mobile {
     display: flex;
@@ -155,7 +154,7 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 
-  background-color: #d6daed;
+  background-color: var(--grey-blue-two);
   border: none;
   border-radius: 20px;
   cursor: pointer;

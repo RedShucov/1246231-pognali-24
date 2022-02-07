@@ -50,6 +50,8 @@
 }
 
 .promo__inner {
+  position: relative;
+
   background-image: url("../img/img-decor/background/traveller-illustration-mobile.png");
   background-repeat: no-repeat;
   background-position-x: 70%;
@@ -256,13 +258,13 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .promo__item:nth-child(odd) {
     width: 365px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .promo__item:nth-child(even) {
     width: 344px;
     margin-left: -21px;
@@ -276,7 +278,7 @@
 }
 
 // последний элемент имеет дополнительные закругления снизу, для мобилки
-@media (max-width: 768px) {
+@media (min-width: $mobile-width) {
   .promo__item:last-child {
     min-height: 80px;
 
@@ -284,7 +286,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .promo__item:last-child {
     min-height: 140px;
 
@@ -292,7 +294,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .promo__item:last-child {
     width: 315px;
     min-height: 107px;
@@ -305,13 +307,13 @@
   background-color: var(--orange-dark);
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .promo__item:nth-child(1) {
     border-top-left-radius: 20px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .promo__item:nth-child(1) {
     width: 345px;
   }
@@ -371,7 +373,7 @@
   color: var(--white);
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .promo__item-number {
     position: static;
 

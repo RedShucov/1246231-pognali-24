@@ -1,9 +1,11 @@
 .user-navigation {
   display: flex;
+  align-items: start;
 }
 
 .user-navigation__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -101,4 +103,16 @@
 
 .user-navigation__log-in:active {
   color: var(--blue-alpha3);
+}
+
+.user-navigation__log-in--no-js {
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+
+@media (min-width: $desktop-width) {
+  .user-navigation__log-in--no-js {
+    position: static;
+  }
 }

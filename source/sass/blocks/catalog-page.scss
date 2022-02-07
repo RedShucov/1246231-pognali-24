@@ -2,11 +2,18 @@
   .catalog-page__form-and-catalog {
     display: flex;
     justify-content: space-between;
+    margin-top: 95px;
   }
 }
 
 .catalog-page__form {
-  margin-top: 21px;
+  margin-top: 19px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-page__form {
+    margin-top: 43px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -14,16 +21,25 @@
     order: 2;
     width: 285px;
     margin-top: 0;
+    margin-right: 2px;
   }
 }
 
 .catalog-page__catalog {
-  margin-top: 28px;
+  margin-top: 27px;
   margin-bottom: 46px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-page__catalog {
+    margin-top: 41px;
+    margin-bottom: 61px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .catalog-page__catalog {
     margin-top: 0;
+    margin-bottom: 78px;
   }
 }

@@ -4,19 +4,23 @@
   display: block;
 
   line-height: 0;
+
+  cursor: pointer;
+
+  fill: var(--white);
 }
 
 @media (min-width: $tablet-width) {
   .logo {
-    margin-top: 17px;
-    margin-left: 57px;
+    padding-top: 17px;
+    padding-left: 57px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .logo {
-    margin-top: 12px;
-    margin-left: 72px;
+    padding-top: 12px;
+    padding-left: 72px;
   }
 }
 
@@ -24,22 +28,24 @@
   .logo::before {
     content: "";
     position: absolute;
-    top: -12px;
-    left: -59px;
+    top: 5px;
+    left: 0;
+    z-index: inherit;
 
     display: block;
     width: 155px;
     height: 42px;
 
     background-image: url("../img/img-decor/background/logo-back.png");
+    background-repeat: no-repeat;
     background-size: contain;
   }
 }
 
 @media (min-width: $desktop-width) {
   .logo::before {
-    top: -14px;
-    left: -70px;
+    top: -2px;
+    left: 1px;
 
     width: 187px;
     height: 50px;
@@ -62,4 +68,22 @@
     width: 129px;
     height: 20px;
   }
+}
+
+.logo__image--no-js {
+  fill: var(--blue-dark);
+}
+
+.logo__image--js {
+  fill: var(--blue-dark);
+}
+
+.logo__image--scroll {
+  z-index: 5;
+
+  fill: var(--blue-dark);
+}
+
+.logo--footer {
+  fill: var(--blue-dark);
 }

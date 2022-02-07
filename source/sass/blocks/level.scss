@@ -43,19 +43,23 @@
   color: var(--blue-light);
 }
 
+.level__value::before {
+  content: none;
+  position: absolute;
+  bottom: 1px;
+  left: -4px;
+
+  display: block;
+  width: 31px;
+  height: 1px;
+
+  background-color: var(--black);
+  opacity: 0.1;
+}
+
 @media (min-width: $tablet-width) {
   .level__value::before {
     content: "";
-    position: absolute;
-    bottom: 1px;
-    left: -4px;
-
-    display: block;
-    width: 31px;
-    height: 1px;
-
-    background-color: var(--black);
-    opacity: 0.1;
   }
 }
 
@@ -162,5 +166,46 @@
     color: var(--white);
 
     opacity: 1;
+  }
+}
+
+// для карточки на главной страницы
+.level--companion-index .level__value {
+  margin-top: 13px;
+
+  color: var(--white);
+}
+
+.level--companion-index .level__value::before {
+  content: "";
+  left: 24%;
+
+  background-color: var(--white);
+}
+
+
+.level--companion-index .level__title {
+  display: block;
+
+  color: var(--white);
+}
+
+// для карточки на странице попутчиков
+.level--companion-card .level__value {
+  margin-top: 11px;
+  margin-left: 9px;
+}
+
+@media (min-width: $tablet-width) {
+  .level--companion-card .level__value {
+    margin-top: 15px;
+    margin-left: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .level--companion-card .level__title {
+    margin-top: 3px;
+    margin-left: 18px;
   }
 }

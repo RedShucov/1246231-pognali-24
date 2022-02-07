@@ -98,11 +98,11 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .user-plans__item::before {
     content: "";
     position: absolute;
-    top: 75px;
+    top: 64%;
     left: 0;
 
     display: block;
@@ -190,6 +190,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .user-plans__item-title {
+    max-width: 475px;
+  }
+}
+
 .user-plans__description-wrapper {
   display: flex;
   flex-direction: column;
@@ -219,6 +225,7 @@
 @media (min-width: $desktop-width) {
   .user-plans__description-wrapper {
     justify-content: start;
+    align-items: end;
     width: 589px;
     margin-top: 0;
   }
@@ -231,6 +238,7 @@
 @media (min-width: $tablet-width) {
   .user-plans__companion-number {
     min-width: 141px;
+    max-width: 150px;
   }
 }
 
@@ -246,6 +254,7 @@
 
 @media (min-width: $tablet-width) {
   .user-plans__date {
+    max-width: 180px;
     margin-top: 0;
     margin-right: 48px;
 

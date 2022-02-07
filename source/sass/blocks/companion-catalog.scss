@@ -5,14 +5,45 @@
   row-gap: 10px;
 }
 
+@media (min-width: $tablet-width) {
+  .companion-catalog__body {
+    row-gap: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion-catalog__body {
+    padding-left: 2px;
+
+    row-gap: 31px;
+  }
+}
+
 .companion-catalog__container-button {
   margin-top: 20px;
 }
 
+@media (min-width: $tablet-width) {
+  .companion-catalog__container-button {
+    margin-top: 49px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion-catalog__container-button {
+    margin-top: 64px;
+  }
+}
+
 .companion-catalog__button {
-  display: block;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding: 0;
+  padding-right: 20px;
+  padding-left: 48px;
 
   font-weight: 700;
   font-size: 17px;
@@ -26,10 +57,73 @@
   cursor: pointer;
 }
 
+@media (min-width: $tablet-width) {
+  .companion-catalog__button {
+    padding-left: 64px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .companion-catalog__button {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+}
+
+.companion-catalog__button::before,
+.companion-catalog__button::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 16px;
+
+  display: block;
+  width: 18px;
+  height: 2px;
+
+  background: var(--blue-light);
+  border-radius: 2px;
+}
+
+@media (min-width: $tablet-width) {
+  .companion-catalog__button::before,
+  .companion-catalog__button::after {
+    top: 8px;
+    left: 13px;
+
+    width: 26px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companion-catalog__button::before,
+  .companion-catalog__button::after {
+    left: 36.4%;
+  }
+}
+
+.companion-catalog__button::after {
+  transform: rotate(-90deg);
+}
+
+.companion-catalog__button:hover::before,
+.companion-catalog__button:hover::after {
+  opacity: 0.6;
+}
+
+.companion-catalog__button:active::before,
+.companion-catalog__button:active::after {
+  opacity: 0.3;
+}
+
 .companion-catalog__pagination {
   display: flex;
   flex-direction: column;
-  margin-top: 18px;
+  margin-top: 21px;
 
   background-color: var(--white);
   border-radius: 20px;
@@ -39,9 +133,9 @@
   .companion-catalog__pagination {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 0;
+    margin-top: 53px;
     padding-top: 25px;
-    padding-right: 35px;
+    padding-right: 0;
     padding-bottom: 25px;
     padding-left: 28px;
   }
@@ -49,7 +143,8 @@
 
 @media (min-width: $desktop-width) {
   .companion-catalog__pagination {
-    padding-right: 41px;
+    margin-top: 73px;
+    padding-right: 8px;
     padding-left: 29px;
   }
 }
@@ -66,6 +161,7 @@
 @media (min-width: $tablet-width) {
   .companion-catalog__pagination-list {
     display: flex;
+    max-width: 60%;
   }
 }
 
@@ -90,6 +186,10 @@
   color: var(--blue-light);
 }
 
+.companion-catalog__pagination-link:hover {
+  opacity: 0.6;
+}
+
 .companion-catalog__pagination-controls {
   display: flex;
   margin: 0;
@@ -98,12 +198,63 @@
   list-style: none;
 }
 
+@media (min-width: $tablet-width) {
+  .companion-catalog__pagination-controls {
+    flex-basis: 123px;
+  }
+}
+
 .companion-catalog__pagination-control {
+  position: relative;
+
   width: 50%;
   height: 51px;
 
   background-color: var(--white);
   cursor: pointer;
+}
+
+.companion-catalog__pagination-control::before {
+  content: "";
+  position: absolute;
+  top: 39%;
+  left: 46%;
+
+  display: block;
+  width: 14px;
+  height: 17px;
+
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 11px solid var(--blue-light);
+}
+
+.companion-catalog__pagination--previous::before {
+  left: 44%;
+
+  transform: rotate(-180deg);
+}
+
+@media (min-width: $tablet-width) {
+  .companion-catalog__pagination--previous::before {
+    top: 34%;
+    left: 49%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .companion-catalog__pagination--next::before {
+    top: 34%;
+    left: 27%;
+  }
+}
+
+.companion-catalog__pagination-control:hover::before {
+  opacity: 0.6;
+}
+
+.companion-catalog__pagination-control:active::before {
+  opacity: 0.3;
 }
 
 .companion-catalog__pagination-control a {

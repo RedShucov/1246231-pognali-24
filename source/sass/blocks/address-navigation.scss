@@ -1,6 +1,5 @@
 .address-navigation__log-in {
   display: block;
-  margin-right: 24px;
   padding-top: 10px;
   padding-bottom: 8px;
 
@@ -23,11 +22,51 @@
 
 .address-navigation__list {
   margin: 0;
-  margin-top: 52px;
-  margin-left: 25px;
+  margin-top: 55px;
+  margin-right: 31px;
   padding: 0;
 
   list-style: none;
+}
+
+.address-navigation__item svg {
+  fill: var(--yellow);
+}
+
+.address-navigation__item:hover svg {
+  fill: var(--yellow-dark);
+}
+
+.address-navigation__item:active svg {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .address-navigation__item--phone svg {
+    width: 26px;
+    height: 23px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address-navigation__item--phone svg {
+    width: 36px;
+    height: 34px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .address-navigation__item--mail svg {
+    width: 28px;
+    height: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address-navigation__item--mail svg {
+    width: 37px;
+    height: 25px;
+  }
 }
 
 .address-navigation__link {
@@ -78,4 +117,12 @@
     font-size: 28px;
     line-height: 28px;
   }
+}
+
+.address-navigation__item .address-navigation__text:hover {
+  color: var(--yellow-dark);
+}
+
+.address-navigation__item .address-navigation__text:active {
+  opacity: 0.3;
 }

@@ -8,8 +8,8 @@
 
 @media (min-width: $tablet-width) {
   .head-main {
-    padding-top: 117px;
-    padding-bottom: 93px;
+    padding-top: 95px;
+    padding-bottom: 73px;
 
     border-radius: 0 0 60px 60px;
   }
@@ -17,7 +17,7 @@
 
 @media (min-width: $desktop-width) {
   .head-main {
-    padding-top: 140px;
+    padding-top: 118px;
   }
 }
 
@@ -26,7 +26,7 @@
   justify-content: space-between;
 }
 
-@media (min-width: $tablet-width) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .head-main__inner {
     padding: 0 34px;
   }
@@ -47,19 +47,22 @@
   font-size: 36px;
   line-height: 36px;
   color: var(--white);
+  word-break: break-word;
 }
 
 @media (min-width: $tablet-width) {
   .head-main__title {
+    max-width: 60%;
+
     font-size: 60px;
-    line-height: 20px;
+    line-height: 60px;
   }
 }
 
 .head-main__title::before {
   content: "";
   position: absolute;
-  top: 50px;
+  bottom: -20px;
 
   display: block;
   width: 100%;
@@ -71,14 +74,17 @@
 
 @media (min-width: $tablet-width) {
   .head-main__title::before {
-    top: 107px;
+    bottom: -77px;
 
     height: 8px;
   }
 }
 
 .head-main__link {
+  position: relative;
+
   display: none;
+  max-width: 210px;
 
   font-weight: 700;
   font-size: 20px;
@@ -90,5 +96,29 @@
 @media (min-width: $tablet-width) {
   .head-main__link {
     display: block;
+    margin-top: 26px;
+    padding-right: 60px;
   }
+}
+
+.head-main__link::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 0;
+
+  display: block;
+  width: 32px;
+  height: 16px;
+
+  background-image: url("../img/img-decor/otherwise/icon-button-back.svg");
+  background-repeat: no-repeat;
+}
+
+.head-main__link:hover {
+  opacity: 0.6;
+}
+
+.head-main__link:active {
+  opacity: 0.3;
 }

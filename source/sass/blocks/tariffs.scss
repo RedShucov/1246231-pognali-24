@@ -46,7 +46,7 @@
 
 @media (min-width: $tablet-width) {
   .tariffs::before {
-    top: 411px;
+    top: 74%;
     right: 85px;
     z-index: 2;
   }
@@ -78,20 +78,20 @@
   }
 }
 
-.tariffs__title {
-  padding-right: 125px;
-}
+// .tariffs__title {
+//   margin-right: 125px;
+// }
 
 @media (min-width: $tablet-width) {
   .tariffs__title {
+    margin-left: 103px;
     padding-right: 0;
-    padding-left: 103px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .tariffs__title {
-    padding-left: 352px;
+    margin-left: 352px;
   }
 }
 
@@ -159,6 +159,7 @@
   font-weight: 400;
   color: var(--white);
 
+  background-color: var(--orange-dark-two);
   border-radius: 50%;
 }
 
@@ -194,6 +195,18 @@
   margin-bottom: 7px;
 }
 
+@media (min-width: $tablet-width) {
+  .tariffs__name {
+    max-width: 360px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs__name {
+    max-width: 520px;
+  }
+}
+
 .tariffs__value {
   margin: 0;
   padding: 0;
@@ -209,7 +222,7 @@
 
     display: block;
     width: 198px;
-    height: 66px;
+    height: 100%;
 
     background-color: var(--grey-three-light);
   }
@@ -227,7 +240,7 @@
   .tariffs__list--standard .tariffs__tariff-wrapper:first-of-type::after {
     top: -40px;
 
-    height: 107px;
+    height: 200%;
 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -238,13 +251,13 @@
   .tariffs__list--standard .tariffs__tariff-wrapper:first-of-type::after {
     top: -48px;
 
-    height: 120px;
+    height: 200%;
   }
 }
 
 @media (min-width: $tablet-width) {
   .tariffs__list--standard .tariffs__tariff-wrapper:last-of-type::after {
-    height: 113px;
+    height: 173%;
 
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -253,7 +266,7 @@
 
 @media (min-width: $desktop-width) {
   .tariffs__list--standard .tariffs__tariff-wrapper:last-of-type::after {
-    height: 120px;
+    height: 185%;
   }
 }
 
@@ -420,6 +433,14 @@
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
   }
+}
+
+.tariffs__button-close:hover {
+  background-color: var(--white-dark);
+}
+
+.tariffs__button-close:active {
+  color: var(--blue-light-alpha3);
 }
 
 .tariffs__business-title {

@@ -10,20 +10,20 @@
   border-radius: 20px;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .filter-form {
-    padding-top: 37px;
+    padding-top: 35px;
     padding-right: 36px;
     padding-bottom: 37px;
     padding-left: 34px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .filter-form {
-    padding-top: 46px;
+    padding-top: 44px;
     padding-right: 48px;
-    padding-bottom: 48px;
+    padding-bottom: 49px;
     padding-left: 48px;
   }
 }
@@ -35,31 +35,62 @@
   letter-spacing: 0.02em;
 }
 
+@media (min-width: $tablet-width) {
+  .filter-form__title {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: normal;
+  }
+}
+
 .filter-form__fieldset {
   margin: 0;
-  margin-top: 12px;
   padding: 0;
 
   border: none;
   border-top: 1px solid var(--yellow-two);
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .filter-form__fieldset {
     display: flex;
     justify-content: space-between;
+    padding-top: 8px;
 
     border: none;
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .filter-form__fieldset {
+    flex-direction: column;
+    margin-top: 13px;
+  }
+}
+
+.filter-form__fieldset:first-of-type {
+  margin-top: 23px;
+}
+
+@media (min-width: $tablet-width) {
   .filter-form__fieldset:first-of-type {
+    margin-top: 39px;
+    padding-top: 26px;
+
     border-top: 1px solid var(--yellow-two);
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $desktop-width) {
+  .filter-form__fieldset:first-of-type {
+    margin-top: 35px;
+    padding-top: 0;
+
+    border: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .filter-form__fieldset:last-of-type {
     padding-bottom: 37px;
 
@@ -67,30 +98,49 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .filter-form__fieldset:last-of-type {
+    border: none;
+  }
+}
+
 .filter-form__legend {
   position: relative;
 
   margin: 0;
-  padding-top: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
 
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .filter-form__legend {
+    align-self: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
   }
 }
 
+@media (min-width: $desktop-width) {
+  .filter-form__legend {
+    align-self: auto;
+  }
+}
+
 .filter-form__legend::after {
   content: "";
   position: absolute;
-  top: 12px;
-  right: 24px;
+  top: 18px;
+  right: -1px;
 
   display: block;
   width: 10px;
@@ -101,33 +151,66 @@
   transform: rotate(-180deg);
 }
 
-.filter-form__fieldset--active .filter-form__legend::after {
-  transform: rotate(0deg);
-}
-
 @media (min-width: $tablet-width) {
   .filter-form__legend::after {
     content: none;
   }
 }
 
+@media (min-width: $desktop-width) {
+  .filter-form__legend::after {
+    content: "";
+    top: 8px;
+    right: 0;
+  }
+}
+
+.filter-form__legend:hover {
+  opacity: 0.6;
+}
+
+.filter-form__legend:active {
+  opacity: 0.3;
+}
+
+// класс добавляемый js для открытия меню
+.filter-form__fieldset--active .filter-form__legend::after {
+  top: 11px;
+
+  transform: rotate(0deg);
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__fieldset--active .filter-form__legend::after {
+    top: 2px;
+  }
+}
+
 .filter-form__list {
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-top: 16px;
+  padding-top: 2px;
+  padding-bottom: 20px;
 
   list-style: none;
   font-weight: 400;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 18px;
   color: var(--black);
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .filter-form__list {
     display: flex;
-    flex-wrap: wrap;
-    width: 490px;
+    flex-direction: row;
+    width: 496px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 5px;
 
     font-size: 20px;
     line-height: 20px;
@@ -136,20 +219,54 @@
 
 @media (min-width: $desktop-width) {
   .filter-form__list {
+    display: none;
+    flex-direction: column;
+    width: auto;
+    padding-top: 25px;
+    padding-left: 0;
+
     font-size: 20px;
     line-height: 20px;
   }
 }
 
 .filter-form__list--transport {
-  display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  padding-top: 5px;
+  padding-bottom: 19px;
+
+  column-gap: 1px;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
-  .filter-form__list--level {
-    justify-content: space-between;
+@media (min-width: $tablet-width) {
+  .filter-form__list--transport {
+    padding-bottom: 9px;
+    padding-left: 0;
+
+    column-gap: 2px;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__list--transport {
+    padding-top: 22px;
+    padding-bottom: 14px;
+
+    column-gap: 1px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__list--level {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+// класс добавляемый js для открытия меню
+.filter-form__fieldset--active .filter-form__list {
+  display: flex;
 }
 
 .filter-form__checkbox-body {
@@ -158,7 +275,7 @@
 
 @media (min-width: $tablet-width) {
   .filter-form__checkbox-body {
-    width: 150px;
+    width: 151px;
     margin: 0;
   }
 }
@@ -179,6 +296,8 @@
   align-items: center;
 
   column-gap: 9px;
+
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
@@ -207,8 +326,8 @@
 
 .filter-form__checkbox {
   display: grid;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   margin: 0;
 
   background-color: var(--white);
@@ -217,6 +336,13 @@
 
   appearance: none;
   place-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__checkbox {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .filter-form__checkbox:not(:checked):hover {
@@ -293,23 +419,25 @@
   width: 220px;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .filter-form__range-box {
     order: 2;
     width: 148px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .filter-form__range-box {
+    order: 0;
     width: 192px;
+    margin-top: 21px;
   }
 }
 
 .filter-form__range-input {
   width: 50%;
   padding: 0;
-  padding-top: 13px;
+  padding-top: 8px;
   padding-bottom: 8px;
 
   font-weight: 500;
@@ -323,19 +451,39 @@
   border: 1px solid var(--grey-four-light);
 }
 
+@media (min-width: $tablet-width) {
+  .filter-form__range-input {
+    padding-bottom: 11px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.filter-form__range-input:hover {
+  z-index: 1;
+
+  border-color: var(--grey-dark-three);
+}
+
+.filter-form__range-input:focus {
+  z-index: 1;
+
+  border-color: var(--blue);
+  outline: none;
+}
+
 .filter-form__range-input--min {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
 .filter-form__range-input--max {
-  border-left: none;
+  margin-left: -1px;
+
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-}
-
-.filter-form__range-input:focus {
-  outline: none;
 }
 
 .filter-form__range-box::before {
@@ -343,6 +491,7 @@
   position: absolute;
   top: 12px;
   left: 50%;
+  z-index: 2;
 
   display: block;
   width: 16px;
@@ -352,24 +501,61 @@
   transform: translateX(-50%);
 }
 
+@media (min-width: $tablet-width) {
+  .filter-form__range-box::before {
+    height: 17px;
+  }
+}
+
+.filter-form__range-box::after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  z-index: 2;
+
+  display: block;
+  width: 16px;
+  height: 2px;
+
+  background-color: var(--grey-four-light);
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__range-box::after {
+    width: 21px;
+  }
+}
+
 .filter-form__range-scale {
   position: relative;
 
   width: auto;
   height: 2px;
-  margin-top: 21px;
+  margin-top: 25px;
 
   background-color: var(--blue-light-alpha2);
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .filter-form__range-scale {
     width: 281px;
+    height: 4px;
+    margin-top: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__range-scale {
+    width: auto;
+    margin-top: 36px;
   }
 }
 
 .filter-form__range-bar {
-  position: relative;
+  position: absolute;
+  right: 0;
 
   width: 150px;
   height: inherit;
@@ -377,15 +563,21 @@
   background-color: var(--blue-light);
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .filter-form__range-bar {
-    width: 166px;
+    width: 63%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__range-bar {
+    width: 70%;
   }
 }
 
 .filter-form__range-button {
   position: absolute;
-  top: -3px;
+  top: -100%;
 
   width: 10px;
   height: 10px;
@@ -397,20 +589,41 @@
   cursor: pointer;
 }
 
+@media (min-width: $tablet-width) {
+  .filter-form__range-button {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+.filter-form__range-button:hover {
+  width: 16px;
+  height: 16px;
+}
+
+.filter-form__range-button:active {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
+}
+
+.filter-form__range-button--min {
+  left: 0;
+}
+
 .filter-form__range-button--max {
-  left: 96%;
+  right: 0;
 }
 
 .filter-form__button {
   width: 100%;
-  margin-top: 21px;
+  margin-top: 4px;
   padding: 0;
   padding-top: 14px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 17px;
+  font-family: "Blogger-Sans", "Arial", sans-serif;
   color: var(--blue);
   text-transform: uppercase;
 
@@ -420,13 +633,20 @@
   cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: $tablet-width) {
   .filter-form__button {
-    padding-top: 18px;
-    padding-bottom: 17px;
+    margin-top: 35px;
+    padding-top: 17px;
+    padding-bottom: 14px;
 
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__button {
+    margin-top: 3px;
   }
 }
 

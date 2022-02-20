@@ -781,7 +781,6 @@
 @media (min-width: $desktop-width) {
   .companion-card__transport {
     flex-direction: row;
-    max-width: 128px;
     margin-top: 4px;
     margin-right: 35px;
 
@@ -793,8 +792,6 @@
   display: flex;
   justify-content: center;
   margin-top: 11px;
-  padding-right: 55px;
-  padding-left: 78px;
 
   column-gap: 1px;
 }
@@ -802,7 +799,6 @@
 @media (min-width: $tablet-width) {
   .companion-card--short .companion-card__transport {
     flex-direction: row;
-    max-width: max-content;
     margin-top: 22px;
     margin-right: 0;
   }
